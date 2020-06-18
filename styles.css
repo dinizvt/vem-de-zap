@@ -1,0 +1,60 @@
+*{
+    color: #075e54;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+body{
+    background-color: rgba(236,229,221, .3)
+}
+.app{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 640px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+input, textarea{
+    background-color: rgba(236,229,221, .3);
+    border-top: 1px solid #ece5dd;
+    border-left: 1px solid #ece5dd;
+    border-right: 1px solid #ece5dd;
+    border-bottom: 3px solid #25d366;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+label{
+    font-weight: 600;
+    font-size: .8em;
+}
+button{
+    padding: 5px 15px;
+    border-radius: 15px;
+    color: white;
+    font-weight: 600;
+    background-color: #25d366;
+    border: none;
+    margin-right: auto;
+
+}
+button:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+textarea{
+    resize: none;
+}
+
+.mb-5{
+    margin-bottom: 5px;
+}
+
+.w1{
+    width: 50%;
+}
+.w2{
+    width: 100%;
+}
