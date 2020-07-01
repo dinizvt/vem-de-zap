@@ -14,7 +14,10 @@ const mapObject = (mask, obj) => {
     let result = {};
     for (let [key, f] of Object.entries(mask)) {
         if (!Object.keys(obj).includes(key)) throw `Key ${key}`;
-        if (f == null) continue;
+        if (f == null){
+            result[key] = obj[key]; 
+            continue;
+        }
         result[key] = f(obj[key]);
     }
     return result;
@@ -47,7 +50,7 @@ const createURL = (url, data) => {
 
 const mask = {
     'phone': formatPhone(55),
-    'text': encodeURIComponent
+    'text': null
 }
 
 window.onload = () => {
