@@ -1,5 +1,6 @@
 *{
     color: var(--font-dark);
+    margin: 0;
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
     box-sizing: border-box;
 }
@@ -16,36 +17,27 @@ body{
 .app{
     padding: 30px;
     background-color: var(--font-light);
-    border-radius: 10px;
+    height: 100%;
+    box-shadow: 0 0 50px var(--border-color);
 }
 input, textarea{
     background-color: var(--bg-color);
-    border-top: 1px solid var(--border-color);
-    border-left: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
+    border: 1px solid var(--border-color);
     border-bottom: 3px solid var(--details);
     padding: 5px;
-    border-radius: 5px;
-    margin-top: 5px;
-}
-#msg{
-    height: 350px;
+    border-radius: 3px;
 }
 label{
     font-weight: 600;
-    font-size: 1em;
 }
 button{
     width: 6em;
     height: 2.5em;
-    border-radius: 2em;
+    border-radius: 3px;
     color: var(--font-light);
     font-weight: 600;
     background-color: var(--details);
     border: none;
-    margin-right: auto;
-    margin-top: 5px;
-
 }
 button:hover{
     cursor: pointer;
@@ -54,15 +46,16 @@ button:hover{
 textarea{
     resize: none;
 }
+.w1{width: 100%}
+.w2{width: 50%}
+.mv-10{margin-top: 10px; margin-bottom: 10px}
 
 @media screen and (min-width: 640px){
     .app{
-        width: 80%;
-        height: 80%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        min-height: 550px;
+        height: min-content;
     }
 }

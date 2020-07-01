@@ -1,12 +1,17 @@
+const URL_MOBILE = 'https://api.whatsapp.com/send';
+const URL_DESKTOP = 'https://web.whatsapp.com/send';
+
+//verify navigator
 const isMobile = navigator => {
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         return true;
     }
     return false;
 }
+
+//apply a function for each value
 const mapObject = (mask, obj) => {
     let result = {};
-
     for (let [key, f] of Object.entries(mask)) {
         if (!Object.keys(obj).includes(key)) throw `Key ${key}`;
         if (f == null) continue;
@@ -14,6 +19,7 @@ const mapObject = (mask, obj) => {
     }
     return result;
 }
+
 //form node -> Object
 const getFormAnsw = form => Object.fromEntries(new FormData(form));
 
@@ -41,11 +47,8 @@ const createURL = (url, data) => {
 
 const mask = {
     'phone': formatPhone(55),
-    'msg': encodeURIComponent
+    'text': encodeURIComponent
 }
-
-const URL_MOBILE = 'https://api.whatsapp.com/send';
-const URL_DESKTOP = 'https://web.whatsapp.com/send';
 
 window.onload = () => {
     const url = isMobile(navigator) ? URL_MOBILE : URL_DESKTOP;
