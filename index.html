@@ -1,21 +1,21 @@
 <html>
     <head>
         <title>Zap</title>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="script.js"></script> 
-        <link rel="stylesheet" href="normalize.css">
+        <script src="script.js"></script>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div class="app">
-            <form action="#" id="msg-form">
-                <div class="mb-5">
+            <form id="main-form">
+                <div>
                     <label>Telefone</label><br>
-                    <input id="phone" class="w1"><br>
+                    <input name="phone" class="w1">
                 </div>
-                <div class="mb-5">
+                <div>
                     <label>Mensagem</label><br>
-                    <textarea id="msg" cols="40" rows="5" class="w2"></textarea><br>
+                    <textarea name="msg" cols="40" rows="5" class="w2"></textarea>
                 </div>
                 <button type="submit" class="bg-green">Enviar</button><br>
             </form>

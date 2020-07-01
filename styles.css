@@ -1,23 +1,29 @@
 *{
-    color: #075e54;
+    color: var(--font-dark);
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
     box-sizing: border-box;
 }
+:root{
+    --bg-color: rgba(236,229,221, .3);
+    --border-color: #ece5dd;
+    --details: #25d366;
+    --font-dark: #075e54;
+    --font-light: white;
+}
 body{
-    background-color: rgba(236,229,221, .3)
+    background-color: var(--bg-color);
 }
 .app{
     padding: 30px;
-    background-color: white;
+    background-color: var(--font-light);
     border-radius: 10px;
-    
 }
 input, textarea{
-    background-color: rgba(236,229,221, .3);
-    border-top: 1px solid #ece5dd;
-    border-left: 1px solid #ece5dd;
-    border-right: 1px solid #ece5dd;
-    border-bottom: 3px solid #25d366;
+    background-color: var(--bg-color);
+    border-top: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 3px solid var(--details);
     padding: 5px;
     border-radius: 5px;
     margin-top: 5px;
@@ -33,9 +39,9 @@ button{
     width: 6em;
     height: 2.5em;
     border-radius: 2em;
-    color: white;
+    color: var(--font-light);
     font-weight: 600;
-    background-color: #25d366;
+    background-color: var(--details);
     border: none;
     margin-right: auto;
     margin-top: 5px;
@@ -47,17 +53,6 @@ button:hover{
 }
 textarea{
     resize: none;
-}
-
-.mb-5{
-    margin-bottom: 5px;
-}
-
-.w1{
-    width: 50%;
-}
-.w2{
-    width: 100%;
 }
 
 @media screen and (min-width: 640px){
